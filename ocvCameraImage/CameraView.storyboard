@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="nFY-TD-fDB">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewCtrl" id="h5S-ea-yWI" customClass="CameraViewController" customModule="ocvCameraImage" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LfO-ob-r9y"/>
+                        <viewControllerLayoutGuide type="bottom" id="mFI-0S-s1H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3NZ-8q-5rb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DoS-rH-qZm">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="CAMERA" id="LPL-YG-L4s">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="rgX-Cb-ODf">
+                                            <connections>
+                                                <action selector="btnCancelTouched:" destination="h5S-ea-yWI" id="fTc-rT-u3g"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wht-s1-j09">
+                                <rect key="frame" x="0.0" y="64" width="320" height="441"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="btnCancel" destination="rgX-Cb-ODf" id="AbE-Ms-Hwy"/>
+                        <outlet property="imgCameraView" destination="Wht-s1-j09" id="yKG-DO-Ykx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BVL-Vj-ur8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="457" y="426"/>
+        </scene>
+    </scenes>
+</document>
